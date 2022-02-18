@@ -1,0 +1,8 @@
+---
+- name: "Create logical volume"
+  community.general.lvol:
+    vg: "{{ item.vg }}"
+    lv: "{{ item.lv_name }}"
+    size: "{{ item.size }}"
+    resizefs: "yes"
+    state: "present"

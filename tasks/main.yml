@@ -1,0 +1,5 @@
+---
+
+- name: "Create logical volumes"
+  include_tasks: loop.yml
+  loop: "{{ logical_volumes__lvconfig }}"
